@@ -1,5 +1,5 @@
 FROM python:3.8
-WORKDIR .
+WORKDIR /game
 COPY . .
 COPY requirements.txt .
 
@@ -12,4 +12,4 @@ RUN chmod 777 ./main.db
 
 EXPOSE 1337
 USER 1000
-CMD [ "python", "./main.py" ]
+ENTRYPOINT [ "python", "./main.py" ]
