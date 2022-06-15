@@ -15,5 +15,5 @@ EXPOSE 1337
 USER 1000
 
 # CMD [ "chmod", "-R", "777", "." ]
-# CMD [ "chmod", "-R", "777", "./sessions" ]
+CMD [ "chmod", "-R", "777", "./main.db" ]
 CMD [ "python", "./main.py" ]
