@@ -1,0 +1,94 @@
+h1, h3, p, a, .chess-game-container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+
+}
+
+h1, h3 {
+  font-weight: bold;
+
+}
+
+#game, #score {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.jumbotron {
+  margin-bottom: 0px !important;
+  background-color: #F3F3FB !important;
+
+}
+
+.white {
+  background-color: #FFFFFF !important;
+
+}
+
+.chess-games-container {
+  width: 800px !important;
+  max-width: 800px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.chess-game-container {
+  width: 400px;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+
+}
+
+.chess-game {
+  width: 360px;
+  height: 360px;
+
+}
+
+.clear {
+  clear: both;
+
+}
+
+.rating {
+  font-size: 13px;
+
+}
+
+.chess-cards-container {
+  width: 880px !important;
+  max-width: 880px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.chess-card-container {
+  width: 220px;
+  height: 220px;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.chess-card {
+  width: 180px;
+  height: 180px;
+  transition: transform .2s;
+
+}
+
+.chess-card:hover {
+  transform: scale(1.25);
+
+}

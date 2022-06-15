@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "pl" ng-app = "Main">
+  <head>
+    {% include "head.html" %}
+
+  </head>
+  <body>
+    {% include "main-navigation.html" %}
+
+
+
+    <section id = "main-page" class = "jumbotron">
+      <div class = "container chess-games-container" ng-controller = "MainController">
+        <div class = "chess-game-container" ng-repeat = "chessGame in chessGames">
+          Białe: {a chessGame.white a}&nbsp;<i class = "rating">{a chessGame.whiteRating a}</i>
+          <br/>
+          Czarne: {a chessGame.black a}&nbsp;<i class = "rating">{a chessGame.blackRating a}</i>
+          <br/>
+          {a chessGame.result a}
+          <br/>
+          Czas: {a chessGame.timeControl a}
+          <br/>
+          Data: {a chessGame.date a}
+          <br/>
+          <img class = "chess-game" ng-src = "{a chessGame.source a}" alt = ""/>
+
+        </div>
+        <div class = "clear"></div>
+
+        <!--
+        <img src = "./abc.gif" alt = ""/>
+        <img src = "./abc.gif" alt = ""/>
+        Select, Textarea, Input work with ng-model
+        ng-repeat is a loop in AngularJS
+        ng-repeat = "x in list"
+        {a x.value a}
+        
+        -->
+
+        <!--
+        Sort by rating of white player
+        Sort by rating of black player
+        Ascending and descending
+        Sort by date ascending
+        Sort by date descending
+
+        Combinations with
+        Filter black players
+        Filter white players
+        Filter results
+
+        -->
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity = "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin = "anonymous"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity = "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin = "anonymous"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin = "anonymous"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src = "{{ url_for('static', filename = 'album.js') }}"></script>
+
+  </body>
+
+</html>
