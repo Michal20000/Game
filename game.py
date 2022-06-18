@@ -112,7 +112,7 @@ class GameRoom:
 		bombs.append(Bomb())
 		bombs.append(Bomb())
 
-		time.sleep(1)
+		time.sleep(5)
 
 		while self.board[headH.indexX][headH.indexY] not in [HOST_NODE, GUEST_HEAD, GUEST_NODE, BOMB] and self.board[headG.indexX][headG.indexY] not in [HOST_HEAD, HOST_NODE, GUEST_NODE, BOMB] and self.running:
 
