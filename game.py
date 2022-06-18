@@ -169,9 +169,9 @@ class GameRoom:
 		winnerG = True
 
 		if self.running:
-			if self.board[headH.indexX][headH.indexY] in [HOST_NODE, GUEST_HEAD, GUEST_NODE]:
+			if self.board[headH.indexX][headH.indexY] in [HOST_NODE, GUEST_HEAD, GUEST_NODE, BOMB]:
 				winnerH = False
-			if self.board[headG.indexX][headG.indexY] in [HOST_HEAD, HOST_NODE, GUEST_NODE]:
+			if self.board[headG.indexX][headG.indexY] in [HOST_HEAD, HOST_NODE, GUEST_NODE, BOMB]:
 				winnerG = False
 
 			if winnerH == False and winnerG == False:
