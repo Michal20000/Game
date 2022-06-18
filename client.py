@@ -11,6 +11,7 @@ class Client:
 		self.wins = 0
 		self.draws = 0
 		self.losses = 0
+		self.rating = 0
 		self.game = None
 		self.direction = None
 
@@ -22,11 +23,12 @@ class Client:
 		self.wins = 0
 		self.draws = 0
 		self.losses = 0
+		self.rating = 800
 		clients[self.client] = self
 
 		connection = sqlite3.connect("main.db")
 		cursor = connection.cursor()
-		cursor.execute(open("./queries/insert-client.sql").read(), (self.client, self.username, self.email, self.password, self.wins, self.draws, self.losses))
+		cursor.execute(open("./queries/insert-client.sql").read(), (self.client, self.username, self.email, self.password, self.wins, self.draws, self.losses, self.rating))
 		connection.commit()
 		connection.close()
 
@@ -45,12 +47,13 @@ class Client:
 		self.wins = client[4]
 		self.draws = client[5]
 		self.losses = client[6]
+		self.rating = client[7]
 		clients[self.client] = self
 
 	def update(self):
 		connection = sqlite3.connect("main.db")
 		cursor = connection.cursor()
-		cursor.execute(open("./queries/update-client.sql").read(), (self.wins, self.draws, self.losses, self.client))
+		cursor.execute(open("./queries/update-client.sql").read(), (self.wins, self.draws, self.losses, self.rating, self.client))
 		connection.commit()
 		connection.close()
 
@@ -66,11 +69,18 @@ class Client:
 		self.losses += losses
 		self.update()
 
+	def _rating(self, rating = 0):
+		self.rating += rating
+		self.update()
+
 	def _game(self, game = None):
 		self.game = game
 
 	def _direction(self, direction = DIRECTION_DOWNWARD):
 		self.direction = direction
 
+	def games(self):
+		return self.wins + self.draws + self.losses
+
 	def __repr__(self):
-		return F"<Client client: {self.client}, username: {self.username}, email: {self.email}, wins: {self.wins}, draws: {self.draws}, losses: {self.losses}, game: {self.game}, direction: {self.direction}>"
+		return F"<Client client: {self.client}, username: {self.username}, email: {self.email}, wins: {self.wins}, draws: {self.draws}, losses: {self.losses}, rating: {self.rating}, game: {self.game}, direction: {self.direction}>"

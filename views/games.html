@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "pl">
+  <head>
+    {% include "head.html" %}
+
+  </head>
+  <body>
+    {% include "game-navigation.html" %}
+
+
+
+    <section id = "main-page" class = "jumbotron">
+      <div class = "snake-games-container">
+        {% for match in matches %}
+        <div class = "snake-game-container">
+          <img class = "head" id = "host-image" source = "{{ match[2] }}" alt = "">
+          <div id = "host">&nbsp{{ match[0] }}
+            <i class = "rating">{{ match[4] }} {{ match[6] }}</i>
+          </div>
+          <br>
+
+          <img class = "head" id = "guest-image" source = "{{ match[3] }}" alt = "">
+          <div id = "guest">&nbsp{{ match[1] }}
+            <i class = "rating">{{ match[5] }} {{ match[7] }}</i>
+          </div>
+
+        </div>
+
+        {% endfor %}
+        <div class = "clear"></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity = "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin = "anonymous"></body>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity = "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin = "anonymous"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin = "anonymous"></script>
+    <script src = "{{ url_for('static', filename = 'games.js') }}"></script>
+
+  </body>
+
+</html>

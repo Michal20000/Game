@@ -21,27 +21,6 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="P2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="globals" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="P2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,81 +84,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="P2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Docutils task">
-      <module name="P2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Sphinx task">
-      <module name="P2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="P2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="P2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.globals" />
@@ -213,46 +117,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="285" key="#Other_File_Types/0.0.1920.1040@0.0.1920.1040" timestamp="1654622667559" />
-    <state x="259" y="265" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1654538696126">
+    <state x="259" y="265" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655493090439">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="259" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1654538696126" />
-    <state x="493" y="85" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1654294815224">
+    <state x="259" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1655493090439" />
+    <state x="493" y="85" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1655493141358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="493" y="85" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1654294815224" />
-    <state width="1884" height="237" key="GridCell.Tab.0.bottom" timestamp="1655325502103">
+    <state x="493" y="85" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1655493141358" />
+    <state width="1884" height="237" key="GridCell.Tab.0.bottom" timestamp="1655581578390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1884" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1655325502103" />
-    <state width="1884" height="237" key="GridCell.Tab.0.center" timestamp="1655325502103">
+    <state width="1884" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1655581578390" />
+    <state width="1884" height="237" key="GridCell.Tab.0.center" timestamp="1655581578389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1884" height="237" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1655325502103" />
-    <state width="1884" height="237" key="GridCell.Tab.0.left" timestamp="1655325502103">
+    <state width="1884" height="237" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1655581578389" />
+    <state width="1884" height="237" key="GridCell.Tab.0.left" timestamp="1655581578389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1884" height="237" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1655325502103" />
-    <state width="1884" height="237" key="GridCell.Tab.0.right" timestamp="1655325502103">
+    <state width="1884" height="237" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1655581578389" />
+    <state width="1884" height="237" key="GridCell.Tab.0.right" timestamp="1655581578389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1884" height="237" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1655325502103" />
-    <state width="1884" height="298" key="GridCell.Tab.1.bottom" timestamp="1654555679473">
+    <state width="1884" height="237" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1655581578389" />
+    <state width="1884" height="298" key="GridCell.Tab.1.bottom" timestamp="1655494745334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1884" height="298" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1654555679473" />
-    <state width="1884" height="298" key="GridCell.Tab.1.center" timestamp="1654555679473">
+    <state width="1884" height="298" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1655494745334" />
+    <state width="1884" height="298" key="GridCell.Tab.1.center" timestamp="1655494745334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1884" height="298" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1654555679473" />
-    <state width="1884" height="298" key="GridCell.Tab.1.left" timestamp="1654555679473">
+    <state width="1884" height="298" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1655494745334" />
+    <state width="1884" height="298" key="GridCell.Tab.1.left" timestamp="1655494745334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1884" height="298" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1654555679473" />
-    <state width="1884" height="298" key="GridCell.Tab.1.right" timestamp="1654555679473">
+    <state width="1884" height="298" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1655494745334" />
+    <state width="1884" height="298" key="GridCell.Tab.1.right" timestamp="1655494745334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1884" height="298" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1654555679473" />
+    <state width="1884" height="298" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1655494745334" />
     <state x="147" y="0" key="SettingsEditor" timestamp="1655320960612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -261,9 +165,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="175" y="65" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1654545582771" />
-    <state x="347" y="0" width="1221" height="1976" key="search.everywhere.popup" timestamp="1654811013294">
+    <state x="347" y="0" width="1221" height="1976" key="search.everywhere.popup" timestamp="1655506892966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="347" y="0" width="1221" height="1976" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1654811013294" />
+    <state x="347" y="0" width="1221" height="1976" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1655506892966" />
   </component>
 </project>

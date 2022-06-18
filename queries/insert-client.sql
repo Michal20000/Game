@@ -6,11 +6,13 @@ INSERT INTO clients
 	password,
 	wins,
 	draws,
-	losses
+	losses,
+	rating
 
 )
 VALUES
 (
+	?,
 	?,
 	?,
 	?,

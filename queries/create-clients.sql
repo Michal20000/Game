@@ -6,6 +6,7 @@ CREATE TABLE clients
 	password TEXT,
 	wins INTEGER,
 	draws INTEGER,
-	losses INTEGER
+	losses INTEGER,
+	rating INTEGER
 
 );

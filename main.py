@@ -130,7 +130,7 @@ def login():
 def profile():
 	if "_profile" in flask.session:
 		client = clients[flask.session["_client"]]
-		return flask.render_template("profile.html", username = client.username, email = client.email, wins = client.wins, draws = client.draws, losses = client.losses)
+		return flask.render_template("profile.html", username = client.username, email = client.email, wins = client.wins, draws = client.draws, losses = client.losses, rating = client.rating)
 	else:
 		return flask.redirect("/login")
 
@@ -145,6 +145,37 @@ def room():
 			return flask.render_template("game-room.html")
 		else:
 			return flask.redirect("/profile")
+	else:
+		return flask.redirect("/login")
+
+
+
+@application.route("/games")
+def games():
+	if "_profile" in flask.session:
+		connection = sqlite3.connect("main.db")
+		cursor = connection.cursor()
+		cursor.execute(open("./queries/select-matches.sql").read(), (flask.session["_client"], flask.session["_client"]))
+		values = cursor.fetchall()
+		matches = list()
+		for value in values:
+			host_change = None
+			guest_change = None
+			if value[7] >= 0:
+				host_change = "+" + str(value[7])
+			else:
+				host_change = str(value[7])
+
+			if value[8] >= 0:
+				guest_change = "+" + str(value[8])
+			else:
+				guest_change = str(value[8])
+
+			matches.append((clients[value[1]].username, clients[value[2]].username, value[3], value[4], value[5], value[6], host_change, guest_change, value[9]))
+		print(matches)
+		connection.commit()
+		connection.close()
+		return flask.render_template("games.html", matches = matches)
 	else:
 		return flask.redirect("/login")
 
@@ -201,8 +232,8 @@ def connectionRoom(data = None):
 		return
 
 	for game_room in waiting_rooms.values():
+		io.join_room(game_room.game, namespace="/game-room")
 		game_room.join(flask.session["_client"])
-		io.join_room(game_room.game, namespace = "/game-room")
 		break
 	else:
 		game_room = GameRoom(application, flask.session["_client"])

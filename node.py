@@ -5,6 +5,7 @@ class Node:
 		self.indexY = 0
 		self.lastX = 0
 		self.lastY = 0
+		self.imageValue = 0
 		self.node = None
 
 	def move(self, indexX, indexY):

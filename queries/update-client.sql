@@ -1,5 +1,6 @@
 UPDATE clients
 SET wins = ?,
 draws = ?,
-losses = ?
+losses = ?,
+rating = ?
 WHERE id = ?;
