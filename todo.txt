@@ -5,6 +5,7 @@ todo: 25 snake-parts, 5 food-parts, 5 bomb-parts
 
 todo: display rating and opponents name
 todo: display games
+todo: some delay
 
 todo: karol 1131 -113
 todo: mm 1054 +33
