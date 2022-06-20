@@ -166,7 +166,7 @@ class GameRoom:
 			frame = self.generateFrame(headH, headG, foods, bombs)
 			with self.application.test_request_context("/"):
 				io.emit(FRAME, frame, room = self.game, namespace = "/game-room")
-			time.sleep(0.0625)
+			time.sleep(0.125)
 
 		# todo: someone wins
 		winnerH = True
