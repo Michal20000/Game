@@ -112,7 +112,11 @@ class GameRoom:
 		bombs.append(Bomb())
 		bombs.append(Bomb())
 
-		time.sleep(5)
+		time.sleep(2.5)
+		frame = self.generateFrame(headH, headG, foods, bombs)
+		with self.application.test_request_context("/"):
+			io.emit(FRAME, frame, room = self.game, namespace = "/game-room")
+		time.sleep(2.5)
 
 		while self.board[headH.indexX][headH.indexY] not in [HOST_NODE, GUEST_HEAD, GUEST_NODE, BOMB] and self.board[headG.indexX][headG.indexY] not in [HOST_HEAD, HOST_NODE, GUEST_NODE, BOMB] and self.running:
 
@@ -162,7 +166,7 @@ class GameRoom:
 			frame = self.generateFrame(headH, headG, foods, bombs)
 			with self.application.test_request_context("/"):
 				io.emit(FRAME, frame, room = self.game, namespace = "/game-room")
-			time.sleep(0.09375)
+			time.sleep(0.0625)
 
 		# todo: someone wins
 		winnerH = True
@@ -286,7 +290,7 @@ class GameRoom:
 		return frame
 
 	def insert(self, host_rating, guest_rating, host_change, guest_change):
-		connection = sqlite3.connect("main.db")
+		connection = sqlite3.connect("database/main.db")
 		cursor = connection.cursor()
 		cursor.execute(open("./queries/insert-match.sql").read(), (self.game, self.clientH.client, self.clientG.client, self.headH.imageValue, self.headG.imageValue, host_rating, guest_rating, host_change, guest_change, datetime.date.today()))
 		connection.commit()

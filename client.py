@@ -26,14 +26,14 @@ class Client:
 		self.rating = 800
 		clients[self.client] = self
 
-		connection = sqlite3.connect("main.db")
+		connection = sqlite3.connect("database/main.db")
 		cursor = connection.cursor()
 		cursor.execute(open("./queries/insert-client.sql").read(), (self.client, self.username, self.email, self.password, self.wins, self.draws, self.losses, self.rating))
 		connection.commit()
 		connection.close()
 
 	def restore(self, client):
-		connection = sqlite3.connect("main.db")
+		connection = sqlite3.connect("database/main.db")
 		cursor = connection.cursor()
 		cursor.execute(open("./queries/select-client.sql").read(), (client,))
 		client = cursor.fetchone()
@@ -51,7 +51,7 @@ class Client:
 		clients[self.client] = self
 
 	def update(self):
-		connection = sqlite3.connect("main.db")
+		connection = sqlite3.connect("database/main.db")
 		cursor = connection.cursor()
 		cursor.execute(open("./queries/update-client.sql").read(), (self.wins, self.draws, self.losses, self.rating, self.client))
 		connection.commit()

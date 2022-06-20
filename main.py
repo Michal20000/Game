@@ -153,7 +153,7 @@ def room():
 @application.route("/games")
 def games():
 	if "_profile" in flask.session:
-		connection = sqlite3.connect("main.db")
+		connection = sqlite3.connect("database/main.db")
 		cursor = connection.cursor()
 		cursor.execute(open("./queries/select-matches.sql").read(), (flask.session["_client"], flask.session["_client"]))
 		values = cursor.fetchall()
@@ -283,7 +283,7 @@ def disconnectionRoom(data = None):
 
 
 if __name__ == "__main__":
-	connection = sqlite3.connect("main.db")
+	connection = sqlite3.connect("database/main.db")
 	cursor = connection.cursor()
 	cursor.execute(open("./queries/select-clients.sql").read())
 	for value in cursor.fetchall():

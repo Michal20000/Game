@@ -7,6 +7,7 @@ RUN pip install -r requirements.txt
 RUN chmod 777 .
 RUN chmod 777 ./main.db
 
+VOLUME /game/database
 EXPOSE 1337
 USER 1000
 ENTRYPOINT [ "python", "./main.py" ]
