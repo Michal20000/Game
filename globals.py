@@ -64,7 +64,7 @@ if __name__ == "__main__":
 	print(random.randrange(1, 5, 1))
 	print(random.randrange(1, 5, 1))
 
-	connection = sqlite3.connect("database/main.db")
+	connection = sqlite3.connect("databases/main.db")
 	cursor = connection.cursor()
 	try:
 		#cursor.execute(open("./queries/create-clients.sql").read())

@@ -290,7 +290,7 @@ class GameRoom:
 		return frame
 
 	def insert(self, host_rating, guest_rating, host_change, guest_change):
-		connection = sqlite3.connect("database/main.db")
+		connection = sqlite3.connect("databases/main.db")
 		cursor = connection.cursor()
 		cursor.execute(open("./queries/insert-match.sql").read(), (self.game, self.clientH.client, self.clientG.client, self.headH.imageValue, self.headG.imageValue, host_rating, guest_rating, host_change, guest_change, datetime.date.today()))
 		connection.commit()

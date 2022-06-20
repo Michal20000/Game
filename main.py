@@ -9,7 +9,7 @@ from game import GameRoom
 
 application = flask.Flask(__name__, template_folder = "./views", static_folder = "./resources")
 application.config["SECRET_KEY"] = "MM"
-application.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///main.db"
+application.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///databases/main.db"
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = sql.SQLAlchemy(application)
 application.config["SESSION_TYPE"] = "sqlalchemy"
@@ -153,7 +153,7 @@ def room():
 @application.route("/games")
 def games():
 	if "_profile" in flask.session:
-		connection = sqlite3.connect("database/main.db")
+		connection = sqlite3.connect("databases/main.db")
 		cursor = connection.cursor()
 		cursor.execute(open("./queries/select-matches.sql").read(), (flask.session["_client"], flask.session["_client"]))
 		values = cursor.fetchall()
@@ -283,7 +283,7 @@ def disconnectionRoom(data = None):
 
 
 if __name__ == "__main__":
-	connection = sqlite3.connect("database/main.db")
+	connection = sqlite3.connect("databases/main.db")
 	cursor = connection.cursor()
 	cursor.execute(open("./queries/select-clients.sql").read())
 	for value in cursor.fetchall():
