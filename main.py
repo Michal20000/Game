@@ -1,7 +1,7 @@
 import flask
 import flask_session as session
 import flask_socketio as io
-import flask_sqlalchemy as sql
+#import flask_sqlalchemy as sql
 from globals import *
 from client import Client
 from game import GameRoom
@@ -9,12 +9,13 @@ from game import GameRoom
 
 application = flask.Flask(__name__, template_folder = "./views", static_folder = "./resources")
 application.config["SECRET_KEY"] = "MM"
-application.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///databases/main.db"
-application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = sql.SQLAlchemy(application)
-application.config["SESSION_TYPE"] = "sqlalchemy"
-application.config["SESSION_SQLALCHEMY"] = db
-application.config["SESSION_SQLALCHEMY_TABLE"] = "sessions"
+#application.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///databases/main.db"
+#application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+#db = sql.SQLAlchemy(application)
+application.config["SESSION_TYPE"] = "filesystem"
+application.config["SESSION_FILE_DIR"] = "./sessions"
+#application.config["SESSION_SQLALCHEMY"] = db
+#application.config["SESSION_SQLALCHEMY_TABLE"] = "sessions"
 session.Session(application)
 # db.create_all()
 socketIO = io.SocketIO(application, manage_session = False)
